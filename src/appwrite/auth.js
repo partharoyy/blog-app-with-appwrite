@@ -38,7 +38,7 @@ export class Authservice {
     try {
       return await this.account.get();
     } catch (error) {
-      console.log('Appwrite error ::', error);
+      console.log('Appwrite error :: getUser :: error', error);
     }
 
     return null;
@@ -48,7 +48,7 @@ export class Authservice {
     try {
       return await this.account.deleteSessions();
     } catch (error) {
-      console.log('Appwrite error ::', error);
+      console.log('Appwrite error :: logout :: error', error);
     }
   }
 }
